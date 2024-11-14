@@ -40,6 +40,8 @@ module vedic_4x4(
     wire [5:0] m6_bit_adder_1;
     wire [5:0] m6_bit_adder_2;
     wire [5:0] m4_bit_adder_to_6bit;
+
+    // compute 2x2 for the 4 bits in vedic manner
     
     vedic_2x2 i1 (.a(a[1:0]), .b(b[1:0]) , .c(q0) );
     vedic_2x2 i2 (.a(a[3:2]), .b(b[1:0]) , .c(q1) );
