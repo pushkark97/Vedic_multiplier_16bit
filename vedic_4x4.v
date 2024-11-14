@@ -53,7 +53,7 @@ module vedic_4x4(
     assign temp_q0 = {2'b0 , q0[3:2]};
     assign m4_bit_adder_1 = q1 + temp_q0 ;
 
-    assign m4_bit_adder_to_6bit = {2'b0 , m4_bit_adder_1};
+    assign m4_bit_adder_to_6bit = {2'b0 , m4_bit_adder_1}; // used in 2nd stage of adders
 
     assign temp_q2 = {2'b0 , q2};
     assign temp_q3 = {q3,2'b0};
