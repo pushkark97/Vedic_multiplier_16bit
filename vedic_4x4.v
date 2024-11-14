@@ -43,10 +43,10 @@ module vedic_4x4(
 
     // compute 2x2 for the 4 bits in vedic manner
     
-    vedic_2x2 i1 (.a(a[1:0]), .b(b[1:0]) , .c(q0) );
-    vedic_2x2 i2 (.a(a[3:2]), .b(b[1:0]) , .c(q1) );
-    vedic_2x2 i3 (.a(a[1:0]), .b(b[3:2]) , .c(q2) );
-    vedic_2x2 i4 (.a(a[3:2]), .b(b[3:2]) , .c(q3) );
+    vedic_2x2 i1 (.a(a[1:0]), .b(b[1:0]) , .c(q0) ); // Both LSBs
+    vedic_2x2 i2 (.a(a[3:2]), .b(b[1:0]) , .c(q1) ); // criss-cross
+    vedic_2x2 i3 (.a(a[1:0]), .b(b[3:2]) , .c(q2) ); // criss-cross
+    vedic_2x2 i4 (.a(a[3:2]), .b(b[3:2]) , .c(q3) ); // Both MSBs
 
     // 4-bit & 6 bit adders in this stage
 
